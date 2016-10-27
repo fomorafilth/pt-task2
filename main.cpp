@@ -19,7 +19,11 @@ public:
     
 };
 
-
+ void Function(const Base &obj)
+ 
+ { cout << " Call method func() for obj"<< endl;
+   obj.func();
+   }
 int main(int argc, char *argv[])
 {
     cout << "* Create Object B" << endl;
