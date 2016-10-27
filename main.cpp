@@ -2,32 +2,43 @@
 
 using namespace std;
 
-class A
+class B
 {
 public:
-    A() { cout << "Construct Base object\n"; }
-    ~A() { cout << "Destruct Base object\n"; }
+    B() { cout << "Construct Base object\n"; }
+    ~B() { cout << "Destruct Base object\n"; }
 
 };
 
-class B: public A
+class A: public B
 {
 public:
-    B() { cout << "Construct Child object\n"; }
-    ~B() { cout << "Destruct Child object\n"; }
-     void func() cout << "Function func() of class B\n";}
+    A() { cout << "Construct A object\n"; }
+    ~A() { cout << "Destruct A object\n"; }
+     void func() cout << "Function func() of class Child\n";}
     
 };
 
- void Function(const A &obj)
+ void Function(const B &obj)
  
  { cout << " Call method func() for obj"<< endl;
    obj.func();
    }
 int main(int argc, char *argv[])
 {
-    cout << "* Create Object B" << endl;
-    B child;
-
+    cout << "* Create Object base" << endl;
+    B base;
+    cout << "creat Object base" << endl;
+    B base;
+    cout << " Create Object A" << endl;
+    A child;
+    
+    cout << "Call method func() for object base" << endl;
+    function(base);
+    cout << " Call method func() for object A" << endl;
+    Function(child);
+    
+    
+    
     return 0;
 }
