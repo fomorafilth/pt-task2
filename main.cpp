@@ -15,11 +15,11 @@ class B: public A
 public:
     B() { cout << "Construct Child object\n"; }
     ~B() { cout << "Destruct Child object\n"; }
-
+     void func() cout << "Function func() of class B\n";}
     
 };
 
- void Function(const Base &obj)
+ void Function(const A &obj)
  
  { cout << " Call method func() for obj"<< endl;
    obj.func();
