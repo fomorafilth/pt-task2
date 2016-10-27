@@ -7,7 +7,7 @@ class B
 public:
     B() { cout << "Construct Base object\n"; }
     ~B() { cout << "Destruct Base object\n"; }
-
+     virtual void func() const {cout << "func() of class Base\n";}
 };
 
 class A: public B
@@ -15,7 +15,7 @@ class A: public B
 public:
     A() { cout << "Construct A object\n"; }
     ~A() { cout << "Destruct A object\n"; }
-     void func() cout << "Function func() of class Child\n";}
+     void func() const {cout << "Function func() of class Child\n";}
     
 };
 
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     A child;
     
     cout << "Call method func() for object base" << endl;
-    function(base);
+    Function(base);
     cout << " Call method func() for object A" << endl;
     Function(child);
     
