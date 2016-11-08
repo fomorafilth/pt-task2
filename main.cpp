@@ -1,29 +1,7 @@
 #include <iostream>
+#include<oop.h>
 
 using namespace std;
-
-class B
-{
-public:
-    B() { cout << "Construct Base object\n"; }
-    ~B() { cout << "Destruct Base object\n"; }
-     virtual void func() const {cout << "func() of class Base\n";}
-};
-
-class A: public B
-{
-public:
-    A() { cout << "Construct A object\n"; }
-    ~A() { cout << "Destruct A object\n"; }
-     void func() const {cout << "Function func() of class Child\n";}
-    
-};
-
- void Function(const B &obj)
- 
- { cout << " Call method func() for obj"<< endl;
-   obj.func();
-   }
 int main(int argc, char *argv[])
 {
     cout << "* Create Object base" << endl;
@@ -36,9 +14,6 @@ int main(int argc, char *argv[])
     cout << "Call method func() for object base" << endl;
     Function(base);
     cout << " Call method func() for object A" << endl;
-    Function(child);
-    
-    
-    
+    Function(child);    
     return 0;
 }
